@@ -35,7 +35,7 @@ const projects = (await getCollection('work'))
 					<div class="hero-actions">
 						<a href="/work/" class="btn-primary">Voir mon travail <Icon icon="arrow-right" size="1.2em" /></a>
 						<a href="/about/" class="btn-secondary">Me contacter</a>
-						<a href="/cv.pdf" class="btn-link"><Icon icon="paper-plane-tilt" size="1.2em" /> CV</a>
+						<a href="/Salim SETTOUTI.pdf" class="btn-link" target="_blank" rel="noopener noreferrer"><Icon icon="paper-plane-tilt" size="1.2em" /> CV</a>
 					</div>
 					<div class="tech-section">
 						<h3 class="tech-title">TECHNOLOGIES</h3>
@@ -58,52 +58,141 @@ const projects = (await getCollection('work'))
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
+			<section class="section with-background">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mes Projets</h3>
-					<p>Découvrez une sélection de mes projets récents, réalisés dans le cadre de ma formation et de mes expériences professionnelles.</p>
+					<h3>Mes Compétences Techniques</h3>
+					<p>Un aperçu des langages, outils et applications que je maîtrise au quotidien.</p>
 				</header>
 
 				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
+					<div class="skills-grid">
+						<div class="skill-category">
+							<div class="skill-header">
+								<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+								<h4>Dév. Web & Apps</h4>
+							</div>
+							<ul>
 								<li>
-									<PortfolioPreview project={project} />
+									<div class="skill-icons">
+										<i class="devicon-html5-plain colored"></i>
+										<i class="devicon-css3-plain colored"></i>
+										<i class="devicon-tailwindcss-original colored"></i>
+										<i class="devicon-bootstrap-plain colored"></i>
+									</div>
+									<span>HTML5/CSS (Tailwind, Bootstrap)</span>
 								</li>
-							))
-						}
-					</Grid>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-javascript-plain colored"></i>
+										<i class="devicon-typescript-plain colored"></i>
+									</div>
+									<span>JavaScript / TypeScript</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-php-plain colored"></i>
+										<i class="devicon-laravel-original colored"></i>
+									</div>
+									<span>PHP 8 (MVC/Laravel - ORM Eloquent)</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-vuejs-plain colored"></i>
+										<i class="devicon-nodejs-plain colored"></i>
+									</div>
+									<span>VueJS, NodeJS, API REST</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-csharp-plain colored"></i>
+										<i class="devicon-flutter-plain colored"></i>
+									</div>
+									<span>C# (MVC, EF), Flutter/Dart</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="skill-category">
+							<div class="skill-header">
+								<Icon icon="list" color="var(--accent-regular)" size="2.5rem" gradient />
+								<h4>Bases de données</h4>
+							</div>
+							<ul>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-mysql-plain colored"></i>
+									</div>
+									<span>MySQL / MariaDB, SQL</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-mongodb-plain colored"></i>
+									</div>
+									<span>MongoDB / NoSQL</span>
+								</li>
+								<li>Modélisation Merise / UML</li>
+								<li>JSON</li>
+							</ul>
+						</div>
+
+						<div class="skill-category">
+							<div class="skill-header">
+								<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+								<h4>Systèmes, Réseaux & Sécu</h4>
+							</div>
+							<ul>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-linux-plain"></i>
+										<i class="devicon-windows8-original colored"></i>
+									</div>
+									<span>Linux / Windows, SSH, WSL2</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-docker-plain colored"></i>
+									</div>
+									<span>Docker, Sécurisation de serveurs</span>
+								</li>
+								<li>Méthodes OWASP, Tests d'intrusion</li>
+								<li>Cert. SecNumacadémie</li>
+							</ul>
+						</div>
+
+						<div class="skill-category">
+							<div class="skill-header">
+								<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+								<h4>Gestion de projet</h4>
+							</div>
+							<ul>
+								<li>Méthodes Agile</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-trello-plain colored"></i>
+									</div>
+									<span>Trello, Diagrammes de Gantt</span>
+								</li>
+								<li>
+									<div class="skill-icons">
+										<i class="devicon-git-plain colored"></i>
+										<i class="devicon-gitlab-plain colored"></i>
+									</div>
+									<span>Git / GitLab</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 
 				<div class="cta">
-					<CallToAction href="/work/">
-						Voir tout
+					<CallToAction href="/about/">
+						En savoir plus sur mon parcours
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Expériences & Domaines</h3>
-					<p>
-						Au cours de mon cursus et de mon stage chez Podeliha, j'ai développé des compétences variées.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Développement Web', 'Gestion MDM', 'Cybersécurité', 'Gestion de BDD', 'Scripts PowerShell'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+			
 		</main>
 	</div>
 </BaseLayout>
@@ -157,6 +246,87 @@ const projects = (await getCollection('work'))
 			width: 320px;
 			height: 320px;
 		}
+	}
+
+	/* Skills Grid Section */
+	.skills-grid {
+		display: grid;
+		grid-auto-rows: 1fr;
+		gap: 1.5rem;
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+
+	@media (min-width: 50em) {
+		.skills-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 70em) {
+		.skills-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	.skill-category {
+		background: var(--gray-999);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		transition: transform 0.3s ease, border-color 0.3s ease;
+		height: 100%;
+	}
+
+	.skill-category:hover {
+		transform: translateY(-5px);
+		border-color: var(--accent-regular);
+	}
+
+	.skill-header {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+		text-align: center;
+	}
+
+	.skill-header h4 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.skill-category ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.8rem;
+		color: var(--gray-300);
+	}
+
+	.skill-category ul li {
+		padding: 0.5rem 1rem;
+		background: var(--gray-900);
+		border-radius: 999px; /* Aspect pilule comme les tags de projets */
+		text-align: center;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: var(--text-sm);
+	}
+
+	.skill-icons {
+		display: flex;
+		gap: 0.25rem;
+		font-size: 1.1rem;
 	}
 
 	.availability-badge {
