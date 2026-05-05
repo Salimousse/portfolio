@@ -4,59 +4,93 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="À propos | SETTOUTI Salim" description="À propos de SETTOUTI Salim">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+				title="À propos de moi"
+				tagline="Développeur en devenir, découvrez mon parcours, mes compétences et mes objectifs."
+			/>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Mon Parcours</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						Actuellement étudiant en <strong>BTS SIO (Services Informatiques aux Organisations) option SLAM</strong> (Solutions Logicielles et Applications Métiers), je me spécialise dans la conception et le développement d'applications logicielles, web et mobiles.
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						Passionné par l'informatique depuis plusieurs années, j'ai choisi ce cursus pour approfondir mes connaissances en programmation, en architecture logicielle et en gestion de bases de données. Je suis constamment à la recherche de nouveaux défis techniques pour évoluer mon savoir-faire.
 					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
+					
 				</div>
 			</section>
+
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Expériences Professionnelles</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<div class="timeline-item">
+						<div class="timeline-header">
+							<div class="timeline-logo">
+								<!-- Placez votre logo Podeliha dans public/assets/ et renommez-le logo-podeliha.png -->
+								<img src="/assets/podeliha.png" alt="Logo Podeliha" />
+							</div>
+							<div class="timeline-title">
+								<h3>Stagiaire Informatique</h3>
+								<p class="timeline-meta"><strong>Podeliha</strong> | <em>Juillet 2025</em></p>
+							</div>
+						</div>
+						<ul class="timeline-list">
+							<li>Migration et configuration d'appareils via un outil MDM.</li>
+							<li>Préparation de postes de travail pour les collaborateurs.</li>
+							<li>Création de scripts d'automatisation en PowerShell.</li>
+							<li>Sensibilisation et participation aux tâches de cybersécurité.</li>
+						</ul>
+					</div>
+
+					<!-- Copiez ce bloc pour ajouter une autre expérience -->
+					<div class="timeline-item">
+						<div class="timeline-header">
+							<div class="timeline-logo">
+								<!-- Placez votre logo Rue Béjo ici -->
+								<img src="/assets/ruebejo.png" alt="Logo Rue Béjo" />
+							</div>
+							<div class="timeline-title">
+								<h3>Stage en Informatique</h3>
+								<p class="timeline-meta"><strong>Rue Béjo </strong> | <em>Mars - Avril 2026</em></p>
+							</div>
+						</div>
+						<ul class="timeline-list">
+							<li>[Décrivez ici vos missions principales]</li>
+							<li>[Compétence technique ou relationnelle acquise]</li>
+						</ul>
+					</div>
 				</div>
 			</section>
+
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Formation</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<div class="timeline-item">
+						<h3>BTS SIO option SLAM</h3>
+						<p class="timeline-meta"><strong>Lycée Chevrollier</strong> | <em>2024 - 2026 (En cours)</em></p>
+						<p> Services Informatiques aux Organisations, spécialisation Solutions Logicielles et Applications Métiers. </p>
+					</div>
+
+					<div class="timeline-item">
+						<h3>Baccalauréat STI2D option SIN</h3>
+						<p class="timeline-meta"><strong>Lycée de l'Hyrôme</strong> | <em>2024</em></p>
+						<p>Mention Bien</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Au-delà du code</h2>
+				<div class="content">
+					<p>Quand je ne suis pas devant un éditeur de texte, je reste un grand curieux des nouvelles technologies et un amateur de projets personnels me permettant d'explorer de nouveaux langages (comme Python ou TypeScript).</p>
 				</div>
 			</section>
 		</main>
-
-		<ContactCTA />
 	</div>
 </BaseLayout>
 
@@ -99,6 +133,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	.timeline-item {
+		margin-bottom: 2rem;
+		padding-left: 1.5rem;
+		border-left: 2px solid var(--gray-700);
+		position: relative;
+	}
+
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		left: -0.4rem;
+		top: 1.1rem; /* Ajusté pour le centrage avec le logo rectangulaire */
+		width: 0.8rem;
+		height: 0.8rem;
+		background: var(--accent-regular);
+		border-radius: 50%;
+	}
+
+	.timeline-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.timeline-logo {
+		width: auto;
+		height: 48px; /* Hauteur fixe pour garder une belle ligne */
+		max-width: 150px; /* Mais un rectangle qui peut s'allonger */
+		flex-shrink: 0;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		overflow: hidden;
+	}
+
+	.timeline-logo img {
+		width: auto;
+		height: 100%;
+		object-fit: contain; /* L'image s'adapte sans être coupée */
+		margin: 0;
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	.timeline-title {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.timeline-title h3,
+	.timeline-item h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin-bottom: 0.2rem;
+		line-height: 1.2;
+	}
+
+	.timeline-title .timeline-meta,
+	.timeline-meta {
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+		margin-bottom: 0;
+	}
+
+	.timeline-item > .timeline-meta {
+		margin-bottom: 1rem;
+	}
+
+	.timeline-meta strong {
+		color: var(--gray-100);
+	}
+
+	.timeline-list {
+		padding-left: 1rem;
+		color: var(--gray-200);
+	}
+
+	.timeline-list li {
+		margin-bottom: 0.5rem;
+		line-height: 1.5;
 	}
 
 	@media (min-width: 50em) {
