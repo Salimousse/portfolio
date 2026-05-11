@@ -1,5 +1,5 @@
 ---
-title: Gestion de flotte AngerScoot (AP 2.2)
+title: AngerScoot 
 publishDate: 2026-05-03 00:00:00
 img: /assets/angerscoot.png
 img_alt: Logo AngerScoot
